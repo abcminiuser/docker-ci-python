@@ -2,9 +2,6 @@ FROM python:3-alpine
 
 RUN apk add --no-cache bash make
 
-RUN pip install pep8
-RUN pip install flake8
-RUN pip install pylint
-RUN pip install bandit
+RUN pip install pep8 flake8 pylint bandit sphinx
 
 CMD ["/bin/bash"]
