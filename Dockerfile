@@ -1,7 +1,7 @@
 FROM python:3-alpine
 
 # Shell Tools
-RUN apk add --no-cache bash make
+RUN apk add --no-cache bash make gcc
 
 # Packaging Tools
 RUN pip install --upgrade setuptools twine
