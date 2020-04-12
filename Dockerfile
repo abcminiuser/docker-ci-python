@@ -3,8 +3,8 @@ FROM python:3-alpine
 # Shell Tools
 RUN apk add --no-cache bash make
 
-# Development tools
-RUN apk add --no-cache gcc musl-dev libffi-dev
+# Development Tools
+RUN apk add --no-cache gcc musl-dev libffi-dev openssl-dev
 
 # Packaging Tools
 RUN pip install --upgrade setuptools wheel twine
