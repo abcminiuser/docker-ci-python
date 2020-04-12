@@ -4,15 +4,15 @@ FROM python:3-alpine
 RUN apk add --no-cache bash make
 
 # Development tools
-RUN apk add --no-cache gcc musl-dev
+RUN apk add --no-cache gcc musl-dev libffi-dev
 
 # Packaging Tools
-RUN pip install --upgrade setuptools twine
+RUN pip install --upgrade setuptools wheel twine
 
 # Code Analysis Tools
 RUN pip install --upgrade pep8 flake8 pylint bandit
 
 # Documentation Tools
-RUN pip install --upgrade sphinx sphinx_rtd_theme m2r
+RUN pip install --upgrade sphinx sphinx_rtd_theme
 
 CMD ["/bin/bash"]
