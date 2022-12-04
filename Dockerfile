@@ -6,6 +6,9 @@ RUN apk add --no-cache bash make
 # Development Tools
 RUN apk add --no-cache gcc musl-dev libffi-dev openssl-dev
 
+# PIP Upgrade
+RUN pip install --upgrade pip
+
 # Packaging Tools
 RUN pip install --upgrade setuptools wheel twine
 
